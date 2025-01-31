@@ -39,3 +39,30 @@ my-fullstack-app/
 ├── **README.md**                # Root documentation
 ├── **Dockerfile**               # Docker configuration (if using Docker)
 └── **docker-compose.yml**       # Docker Compose configuration (if using Docker)
+
+*************************Server folder file  structure***************************************
+server/
+├── src/
+│   ├── config/
+│   │   └── db.js              # Database configuration
+│   ├── controllers/
+│   │   └── authController.js  # Login logic
+│   ├── models/
+│   │   └── User.js            # User model
+│   ├── routes/
+│   │   └── authRoutes.js      # Authentication routes
+│   ├── middlewares/
+│   │   └── authMiddleware.js  # JWT verification middleware
+│   ├── utils/
+│   │   └── jwtUtils.js        # JWT utility functions
+│   ├── validators/
+│   │   └── authValidator.js   # Request validation
+│   ├── constants/
+│   │   └── messages.js        # Application-wide messages
+│   ├── tests/
+│   │   └── auth.test.js       # Tests for auth routes
+│   ├── app.js                 # Main application setup
+│   └── server.js              # Entry point
+├── .env                       # Environment variables
+├── package.json               # Backend dependencies
+└── README.md                  # Documentation
