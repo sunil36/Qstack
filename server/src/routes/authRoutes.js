@@ -1,9 +1,9 @@
-const express = require('express');
-const { loginValidator } = require('../validators/authValidator');
-const { login } = require('../controllers/authController');
-
+const express = require("express");
 const router = express.Router();
 
-router.post('/login', loginValidator, login);
+// Login page route
+router.get("/", (req, res) => {
+    res.render("admin/layouts/auth/login", { title: "Login Page" });
+});
 
 module.exports = router;

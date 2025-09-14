@@ -66,3 +66,45 @@ server/
 ├── .env                       # Environment variables
 ├── package.json               # Backend dependencies
 └── README.md                  # Documentation
+
+
+
+
+flow below setup
+
+npm init -y
+npm i express
+npm i -D nodemon
+
+https://prium.github.io/falcon/v3.25.0/dashboard/project-management.html
+
+project-root/
+├─ public/                          # Static assets (CSS, JS, images)
+│  └─ ...
+├─ views/                           # All server-rendered templates
+│  ├─ admin/                        # Admin-specific views
+│  │  ├─ layouts/                   # Base layouts for admin
+│  │  │  └─ main.ejs                # Main admin layout (header, sidebar, footer)
+│  │  ├─ dashboard/                 # Dashboard-related views
+│  │  │  └─ index.ejs
+│  │  ├─ users/                     # User management views
+│  │  │  ├─ list.ejs
+│  │  │  ├─ create.ejs
+│  │  │  └─ edit.ejs
+│  │  ├─ reports/                   # Reports pages
+│  │  │  └─ index.ejs
+│  │  ├─ settings/                  # Admin settings
+│  │  │  └─ general.ejs
+│  │  └─ auth/                      # Admin login/register
+│  │     ├─ login.ejs
+│  │     ├─ register.ejs
+│  │     └─ forgot-password.ejs
+│  │
+│  └─ shared/                       # Optional shared partials (used by admin + frontend)
+│     ├─ header.ejs
+│     ├─ footer.ejs
+│     └─ sidebar.ejs
+│
+├─ src/
+│  └─ server.js                     # Express server
+└─ package.json
