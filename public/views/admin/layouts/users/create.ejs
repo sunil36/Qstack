@@ -1,0 +1,139 @@
+<%- include("../../shared/header") %>
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row flex-between-center">
+                <div class="col-md">
+                    <h5 class="mb-2 mb-md-0">Add User</h5>
+                </div>
+                <div class="col-auto"><button class="btn btn-link text-secondary p-0 me-3 fw-medium"
+                        role="button">Discard</button><button class="btn btn-primary" role="button">Add User
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-0">
+        <div class="col-lg-8 pe-lg-2">
+            <div class="card mb-3">
+                <div class="card-header bg-body-tertiary">
+                    <h6 class="mb-0">Basic information</h6>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row gx-2">
+                            <div class="col-12 mb-3"><label class="form-label" for="product-name">First
+                                    name:</label><input class="form-control" id="product-name" type="text" /></div>
+                            <div class="col-12 mb-3"><label class="form-label" for="manufacturar-name">Last
+                                    Name:</label><input class="form-control" id="manufacturar-name" type="text" /></div>
+                            <div class="col-12 mb-3"><label class="form-label"
+                                    for="identification-no">Email:</label><input class="form-control"
+                                    id="identification-no" type="text" /></div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header bg-body-tertiary">
+                    <h6 class="mb-0">Add User images</h6>
+                </div>
+                <div class="card-body">
+                    <form class="dropzone dropzone-multiple p-0" id="dropzoneMultipleFileUpload"
+                        data-dropzone="data-dropzone" action="#!" data-options='{"acceptedFiles":"image/*"}'>
+                        <div class="fallback"><input name="file" type="file" multiple="multiple" /></div>
+                        <div class="dz-message" data-dz-message="data-dz-message"> <img class="me-2"
+                                src="../../../assets/img/icons/cloud-upload.svg" width="25" alt="" /><span
+                                class="d-none d-lg-inline">Drag your image here<br />or, </span><span
+                                class="btn btn-link p-0 fs-10">Browse</span></div>
+                        <div class="dz-preview dz-preview-multiple m-0 d-flex flex-column">
+                            <div class="d-flex media align-items-center mb-3 pb-3 border-bottom btn-reveal-trigger"><img
+                                    class="dz-image" src="../../../assets/img/icons/cloud-upload.svg" alt="..."
+                                    data-dz-thumbnail="data-dz-thumbnail" />
+                                <div class="flex-1 d-flex flex-between-center">
+                                    <div>
+                                        <h6 data-dz-name="data-dz-name"></h6>
+                                        <div class="d-flex align-items-center">
+                                            <p class="mb-0 fs-10 text-400 lh-1" data-dz-size="data-dz-size"></p>
+                                            <div class="dz-progress"><span class="dz-upload"
+                                                    data-dz-uploadprogress=""></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown font-sans-serif"><button
+                                            class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal dropdown-caret-none"
+                                            type="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"><span class="fas fa-ellipsis-h"></span></button>
+                                        <div class="dropdown-menu dropdown-menu-end border py-2"><a
+                                                class="dropdown-item" href="#!" data-dz-remove="data-dz-remove">Remove
+                                                File</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 ps-lg-2">
+            <div class="sticky-sidebar">
+                <div class="card mb-3">
+                    <div class="card-header bg-body-tertiary">
+                        <h6 class="mb-0">Roles</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="row gx-2">
+                            <div class="col-12 mb-3"><label class="form-label" for="product-category">Select
+                                    category:</label><select class="form-select" id="product-category"
+                                    name="product-category">
+                                    <option value="computerAccessories">Partner</option>
+                                    <option>Subordinate</option>
+                                    <option>Business</option>
+                                    <option>Hotel</option>
+                                    <option>Support</option>
+                                    <option>Guest For Demo</option>
+                                </select></div>
+                            <div class="col-12"><label class="form-label" for="product-subcategory">Select
+                                    sub-category Access:</label><select class="form-select" id="product-subcategory"
+                                    name="product-subcategory">
+                                    <option value="laptop">View</option>
+                                    <option>All Access</option>
+                                    <option>Demo Access</option>
+                                </select></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card mb-3">
+                    <div class="card-header bg-body-tertiary">
+                        <h6 class="mb-0">User status</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check"><input class="form-check-input p-2" id="in-stock" type="radio"
+                                name="stock-status" /><label class="form-check-label fs-9 fw-normal text-700"
+                                for="in-stock">In stock</label></div>
+                        <div class="form-check"><input class="form-check-input p-2" id="unavailable" type="radio"
+                                name="stock-status" /><label class="form-check-label fs-9 fw-normal text-700"
+                                for="unavailable">Unavailable</label></div>
+                        <div class="form-check"><input class="form-check-input p-2" id="to-be-announced" type="radio"
+                                name="stock-status" /><label class="form-check-label fs-9 fw-normal text-700"
+                                for="to-be-announced">To be announced</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md">
+                    <h5 class="mb-2 mb-md-0">You're almost done!</h5>
+                </div>
+                <div class="col-auto"><button class="btn btn-link text-secondary p-0 me-3 fw-medium"
+                        role="button">Discard</button><button class="btn btn-primary" role="button">Add product
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("../../shared/footer") %>

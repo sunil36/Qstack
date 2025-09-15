@@ -50,7 +50,7 @@
                                                 </div>
                                             </div>
                                             <!--**************************** Login Form Chnages here********************************************** -->
-                                            <form id="loginForm">
+                                            <form id="loginForm" method="POST">
                                                 <div class="mb-3"><label class="form-label" for="card-email">Email
                                                         address</label><input class="form-control" id="card_email"
                                                         type="email" /></div>
@@ -282,8 +282,11 @@
             alertBox.classList.add("d-none");
         }, 3000);
         try {
-            resp = await axios("/login", { username, password });
+            resp = await axios.post("/login", { username, password });
             document.getElementById("ResponseMessage").innerText = resp.data.message;
+            setTimeout(() => {
+                window.location.href = `${window.location.origin}/admin`;
+            })
         } catch (error) {
             if (error.response) {
                 document.getElementById("ResponseMessage").innerText = error.response.data.message;

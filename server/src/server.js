@@ -9,6 +9,9 @@ import seedSuperAdmin from "./config/superadmin.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 const PORT = process.env.PORT || 3000;
 // Set views directory & template engine
 app.set("views", path.join(__dirname, "../../public/views"));
